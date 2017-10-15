@@ -1,0 +1,40 @@
+{
+  "session": {
+    "sessionId": "SessionId.Session1",
+    "application": {
+      "applicationId": "<ApplicationId>"
+    },
+    "user": {
+      "userId": "amzn1.ask.account.testaccount1"
+    },
+    "new": false, 
+    "attributes": {
+      "character": {
+        "name": "Jon Snow",
+        "gender": "Male",
+        "aliases": [
+          "The Bastard of Winterfell",
+          "Lord Snow",
+          "Ned Stark's Bastard",
+          "The Snow of Winterfell",
+          "The Crow-Come-Over",
+          "The 998th Lord Commander of the Night's Watch",
+          "The Black Bastard of the Wall",
+          "Lord Crow"
+        ]
+      }
+    }
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.TestSession1",
+    "timestamp": "2016-05-19T01:07:55Z",
+    "intent": {
+      "name": "NicknameIntent",
+         "slots": {
+         }
+    },
+    "locale": "en-US"
+  },
+  "version": "1.0"
+}

@@ -1,0 +1,32 @@
+{
+    "version": "1.0",
+    "response": {
+      "shouldEndSession": false,
+      "outputSpeech": {
+        "type": "SSML",
+        "ssml": "<speak> Jon Snow has several nicknames, the most famous is 'The Bastard of Winterfell' </speak>"
+      },
+      "reprompt": {
+        "outputSpeech": {
+          "type": "SSML",
+          "ssml": "<speak> Do you want to know more about Jon Snow? </speak>"
+        }
+      }
+    },
+    "sessionAttributes": {
+      "character": {
+        "name": "Jon Snow",
+        "gender": "Male",
+        "aliases": [
+          "The Bastard of Winterfell",
+          "Lord Snow",
+          "Ned Stark's Bastard",
+          "The Snow of Winterfell",
+          "The Crow-Come-Over",
+          "The 998th Lord Commander of the Night's Watch",
+          "The Black Bastard of the Wall",
+          "Lord Crow"
+        ]
+      }
+    }
+  }

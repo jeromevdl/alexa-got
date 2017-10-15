@@ -1,0 +1,24 @@
+{
+    "version": "1.0",
+    "response": {
+      "shouldEndSession": false,
+      "outputSpeech": {
+        "type": "SSML",
+        "ssml": "<speak> Eddard Stark is from House Stark of Winterfell, its motto is 'Winter is Coming' </speak>"
+      },
+      "reprompt": {
+        "outputSpeech": {
+          "type": "SSML",
+          "ssml": "<speak> Do you want to bend the knee? </speak>"
+        }
+      }
+    },
+    "sessionAttributes": {
+      "character": {
+        "name": "Eddard Stark",
+        "allegiances": [
+          "https://anapioficeandfire.com/api/houses/362"
+        ]
+      }
+    }
+  }

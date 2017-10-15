@@ -1,0 +1,531 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "FamilyIntent",
+      "samples": [
+        "who is her {familymemberslot}",
+        "who is his {familymemberslot}"
+      ],
+      "slots": [
+        {
+          "name": "familymemberslot",
+          "type": "FAMILYMEMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "HouseIntent",
+      "samples": [
+        "did he pledge allegiance",
+        "did she pledge allegiance",
+        "from which house",
+        "to whom did he pledge allegiance",
+        "to whom did she pledge allegiance",
+        "what house is he from",
+        "what is his family",
+        "what is her family"
+      ],
+      "slots": []
+    },
+    {
+      "name": "NicknameIntent",
+      "samples": [
+        "Does he have a nickname",
+        "Does he have a pseudo",
+        "Does he have a pseudonym",
+        "Does he have an alias",
+        "What is his alias",
+        "What is his nickname",
+        "What is his pseudonym",
+        "What is his pseudo",
+        "Does she have a nickname",
+        "Does she have a pseudo",
+        "Does she have a pseudonym",
+        "Does she have an alias",
+        "What is her alias",
+        "What is her nickname",
+        "What is her pseudonym",
+        "What is her pseudo"
+      ],
+      "slots": []
+    },
+    {
+      "name": "WhoIsIntent",
+      "samples": [
+        "give me information about {characterslot}",
+        "who is {characterslot}",
+        "tell me more about {characterslot}",
+        "{characterslot}"
+      ],
+      "slots": [
+        {
+          "name": "characterslot",
+          "type": "CHARACTER",
+          "samples": []
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "CHARACTER",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "aegon i targaryen",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "aegon ii targaryen",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "aegon iv targaryen",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "aegon v targaryen",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "arya stark",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "benjen stark",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "bran stark",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "catelyn stark",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "cersei lannister",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "daenerys targaryen",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "dickon tarly",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "edmure tully",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "eddard stark",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "elia martell",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "euron greyjoy",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "gregor clegane",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "ilyn payne",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "jaime lannister",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "jasper arryn",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "jeor mormont",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "jeyne westerling",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "joffrey baratheon",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "jon arryn",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "jon snow",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "lancel lannister",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "leona tyrell",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "loras tyrell",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "lyanna mormont",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "lyanna stark",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "lysa arryn",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "margaery tyrell",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "melisandre",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "missandei",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "myrcella baratheon",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "nymeria sand",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "obella sand",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "obara sand",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "oberyn martell",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "petyr baelish",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "randyll tarly",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "renly baratheon",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "rhaegar targaryen",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "rickard karstark",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "rickon stark",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "robb stark",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "robert baratheon",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "roose bolton",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "samwell tarly",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "sandor clegane",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "sansa stark",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "shae",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "stannis baratheon",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "thoros of myr",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "theon greyjoy",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "tommen baratheon",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "tyrion lannister",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "tywin lannister",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "viserys targaryen",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "FAMILYMEMBER",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "spouse",
+            "synonyms": [
+              "husband",
+              "wife"
+            ]
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "mother",
+            "synonyms": [
+              "mum",
+              "mummy",
+              "mom"
+            ]
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "father",
+            "synonyms": [
+              "dad",
+              "daddy"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

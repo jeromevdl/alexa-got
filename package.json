@@ -1,0 +1,22 @@
+{
+  "name": "GOT",
+  "version": "1.0.0",
+  "description": "GOT Alexa Skill",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text --tempDirectory=lambda-test/target/.nyc_output --reportDir=lambda-test/target/coverage mocha lambda-test/index.test",
+    "package" : "pushd lambda && node-lambda package && popd",
+    "deploy" : "pushd lambda && node-lambda deploy && popd"
+  },
+  "author": "Jerome Van Der Linden",
+  "dependencies": {
+    "alexa-sdk": "^1.0.14",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "lambda-testing-framework": "^3.1.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "session": {
+    "sessionId": "SessionId.Session1",
+    "application": {
+      "applicationId": "<ApplicationId>"
+    },
+    "user": {
+      "userId": "amzn1.ask.account.testaccount1"
+    },
+    "new": false, 
+    "attributes": {
+      "character": {
+        "name": "Joffrey Baratheon",
+        "father": "https://anapioficeandfire.com/api/characters/901",
+        "allegiances": []
+      }
+    }
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.TestSession1",
+    "timestamp": "2016-05-19T01:07:55Z",
+    "intent": {
+      "name": "HouseIntent",
+         "slots": {
+         }
+    },
+    "locale": "en-US"
+  },
+  "version": "1.0"
+}

@@ -1,0 +1,23 @@
+{
+    "version": "1.0",
+    "response": {
+      "shouldEndSession": false,
+      "outputSpeech": {
+        "type": "SSML",
+        "ssml": "<speak> His father is Eddard Stark </speak>"
+      },
+      "reprompt": {
+        "outputSpeech": {
+          "type": "SSML",
+          "ssml": "<speak> Any other information (spouse, house, nickname)? </speak>"
+        }
+      }
+    },
+    "sessionAttributes": {
+      "character": {
+        "name": "Robb Stark",
+        "gender": "Male",
+        "father": "https://anapioficeandfire.com/api/characters/339"
+      }
+    }
+  }

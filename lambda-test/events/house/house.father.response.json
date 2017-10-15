@@ -1,0 +1,23 @@
+{
+    "version": "1.0",
+    "response": {
+      "shouldEndSession": false,
+      "outputSpeech": {
+        "type": "SSML",
+        "ssml": "<speak> Joffrey Baratheon is from House Baratheon of Storm's End, its motto is 'Ours is the Fury' </speak>"
+      },
+      "reprompt": {
+        "outputSpeech": {
+          "type": "SSML",
+          "ssml": "<speak> Do you want to bend the knee? </speak>"
+        }
+      }
+    },
+    "sessionAttributes": {
+      "character": {
+        "name": "Joffrey Baratheon",
+        "father": "https://anapioficeandfire.com/api/characters/901",
+        "allegiances": []
+      }
+    }
+  }
