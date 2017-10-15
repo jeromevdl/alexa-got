@@ -3,7 +3,7 @@
 const Alexa = require('alexa-sdk');
 const request = require('request-promise');
 
-const APP_ID = '<ApplicationId>';
+const APP_ID = 'amzn1.ask.skill.f6ae6555-a19e-4052-83cc-abfa40020dde';
 
 
 // --------------- GOT API ------------------------
@@ -29,6 +29,20 @@ var queryApi = function(url) {
 }
 
 // --------------- util methods ---------------------
+
+/**
+ * Retrieve slot when using a synonym
+ * @param {Object} slot Slot of the Intent
+ */
+var slotValue = function(slot){
+    let value = slot.value;
+    let resolution = (slot.resolutions && slot.resolutions.resolutionsPerAuthority && slot.resolutions.resolutionsPerAuthority.length > 0) ? slot.resolutions.resolutionsPerAuthority[0] : null;
+    if (resolution && resolution.status.code == 'ER_SUCCESS_MATCH'){
+        let resolutionValue = resolution.values[0].value;
+        value = resolutionValue.name;
+    }
+    return value;
+}
 
 /**
  * Search for allegiance and query API to retrieve house details
@@ -68,7 +82,7 @@ var retrieveHouseOrFatherHouse = function(initialCharacter, character, handler) 
 					retrieveHouseOrFatherHouse(initialCharacter, characterFound, handler);
 				})
 				.catch(function (err) {
-					// TODO : No father
+					handler.emit(':ask', 'I could not find his father', 'Have you got another question?');
 				});
 			} else {
 				handler.emit(':ask', 'I could not find his allegiance', 'Have you got another question?');
@@ -89,16 +103,16 @@ var handlers = {
 		var _this = this;
 		var character = _this.attributes['character'];
 		if (!character) {
-			// TODO : error
+			handler.emit(':ask', 'Please first ask \'Who is \' with the name of the character', 'You can ask me \'who is Catelyn Stark\'');
 			return;
 		}
-		if (familymemberslot && familymemberslot.value) {
-			var familymember = familymemberslot.value;
-			
+		if (familymemberslot && (familymemberslot.value || familymemberslot.resolutions)) {
+			var familymember = slotValue(familymemberslot);
+			var subjet = ((character.gender == "Male") ? 'His ' : 'Her ');
 			if (character[familymember]) {
 				queryApi(character[familymember])
 					.then(function(characterFound) {
-						var subjet = ((character.gender == "Male") ? 'His ' : 'Her ');
+						
 						var familySubject = ((familymember == "spouse") ? ((character.gender == "Male") ? 'wife' : 'husband') : familymember );
 						var repromptSpeech = (familymember == "spouse") 
 											? 'Would you like some more information (parents, house, nickname)?' 
@@ -108,6 +122,8 @@ var handlers = {
 					.catch(function (err) {
 						_this.emit(':ask', 'I could not find his parent', 'Can you repeat your question?');
 					});
+			} else {
+				_this.emit(':ask', 'I could not find this member of ' + subjet + 'family', 'You can ask me another question');
 			}
 		}
 	},
@@ -131,8 +147,9 @@ var handlers = {
 					_this.attributes['character'] = null;
 					_this.emit(':ask', 'I could not find any character with that name, can you say it again?', 'Can you repeat your question?');
 				});
-		}
-		
+		} else {
+			_this.emit(':ask', 'I could not find any character with that name, can you say it again?', 'Can you repeat your question?');
+		}		
 	},
 
 	/**
@@ -143,7 +160,7 @@ var handlers = {
 	'NicknameIntent' : function () {
 		var character = this.attributes['character'];
 		if (!character) {
-			// TODO : error
+			handler.emit(':ask', 'Please first ask \'Who is \' with the name of the character', 'You can ask me \'who is Robert Baratheon\'');
 			return;
 		}
 		var message;
@@ -169,7 +186,7 @@ var handlers = {
 	'HouseIntent' : function () {
 		var character = this.attributes['character'];
 		if (!character) {
-			// TODO : error
+			handler.emit(':ask', 'Please first ask \'Who is \' with the name of the character', 'You can ask me \'who is Jon Snow\'');
 			return;
 		}
 		retrieveHouseOrFatherHouse(character, character, this);

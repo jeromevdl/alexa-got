@@ -50,15 +50,7 @@
         "What is his alias",
         "What is his nickname",
         "What is his pseudonym",
-        "What is his pseudo",
-        "Does she have a nickname",
-        "Does she have a pseudo",
-        "Does she have a pseudonym",
-        "Does she have an alias",
-        "What is her alias",
-        "What is her nickname",
-        "What is her pseudonym",
-        "What is her pseudo"
+        "What is his pseudo"
       ],
       "slots": []
     },
@@ -495,7 +487,7 @@
       "name": "FAMILYMEMBER",
       "values": [
         {
-          "id": null,
+          "id": "SPOUSE",
           "name": {
             "value": "spouse",
             "synonyms": [
@@ -505,7 +497,7 @@
           }
         },
         {
-          "id": null,
+          "id": "MOTHER",
           "name": {
             "value": "mother",
             "synonyms": [
@@ -516,7 +508,7 @@
           }
         },
         {
-          "id": null,
+          "id": "FATHER",
           "name": {
             "value": "father",
             "synonyms": [

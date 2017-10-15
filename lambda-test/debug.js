@@ -1,4 +1,4 @@
-var roleArn = 'arn:aws:iam::<id>:role/<role name>';
+var roleArn = 'arn:aws:iam::523648510761:role/lambda_got_execution';
 var region = 'us-east-1';
 
 var AWS = require('aws-sdk');

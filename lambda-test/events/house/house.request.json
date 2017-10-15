@@ -2,7 +2,7 @@
   "session": {
     "sessionId": "SessionId.Session2",
     "application": {
-      "applicationId": "<ApplicationId>"
+      "applicationId": "amzn1.ask.skill.f6ae6555-a19e-4052-83cc-abfa40020dde"
     },
     "user": {
       "userId": "amzn1.ask.account.testaccount1"

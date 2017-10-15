@@ -1,0 +1,23 @@
+{
+    "version": "1.0",
+    "response": {
+      "shouldEndSession": false,
+      "outputSpeech": {
+        "type": "SSML",
+        "ssml": "<speak> His wife is Jeyne Westerling </speak>"
+      },
+      "reprompt": {
+        "outputSpeech": {
+          "type": "SSML",
+          "ssml": "<speak> Would you like some more information (parents, house, nickname)? </speak>"
+        }
+      }
+    },
+    "sessionAttributes": {
+      "character": {
+        "name": "Robb Stark",
+        "gender": "Male",
+        "spouse": "https://anapioficeandfire.com/api/characters/561"
+      }
+    }
+  }
